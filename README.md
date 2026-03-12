@@ -5,16 +5,16 @@ Analizador léxico de ejemplo construido con JFlex y Java 21.
 ## Estructura del proyecto
 
 ```
-Compilador_ejemplos/
+analizador_lexico/
+├── README.md
 ├── pom.xml
 └── src/
-    └── ejemplo/jflex/
-        ├── Generador.java      # Regenera MiLexico.java desde lexico.flex
-        ├── Main_lexer.java     # Punto de entrada principal
-        ├── Token.java          # Clase Token
-        ├── input_1.txt         # Archivo de prueba
-        ├── lexico.flex         # Definición del léxico (fuente JFlex)
-        └── Lexer.java          # Generado por JFlex (no editar a mano)
+      ├── Generador.java      # Regenera MiLexico.java desde lexico.flex
+      ├── Main_lexer.java     # Punto de entrada principal
+      ├── Token.java          # Clase Token
+      ├── input_1.txt         # Archivo de prueba
+      ├── lexico.flex         # Definición del léxico (fuente JFlex)
+      └── Lexer.java          # Generado por JFlex (no editar a mano)
 ```
 
 ## Prerrequisitos
