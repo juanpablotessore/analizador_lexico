@@ -1,0 +1,5 @@
+"mi cadena de ejemplo"
+abstract
+boolean
+miIdentificador
+25 = miOtroIdentificador
