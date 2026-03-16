@@ -24,11 +24,11 @@ analizador_lexico/
 
 ## Primer uso: generar el léxico
 
-`MiLexico.java` se genera a partir de `lexico.flex` con JFlex.
+`Lexer.java` se genera a partir de `lexico.flex` con JFlex.
 Antes de compilar por primera vez (o si modificás `lexico.flex`), ejecutá:
 
 ```bash
-mvn exec:java -Dexec.mainClass="ejemplo.jflex.Generador"
+mvn exec:java -Dexec.mainClass="Generador"
 ```
 
 ## Compilar y ejecutar
@@ -38,7 +38,7 @@ mvn exec:java -Dexec.mainClass="ejemplo.jflex.Generador"
 mvn clean compile
 
 # Ejecutar el analizador léxico
-mvn exec:java -Dexec.mainClass="ejemplo.jflex.Main_lexer"
+mvn exec:java -Dexec.mainClass="Main_lexer"
 ```
 
 Al ejecutar, el programa pregunta:
@@ -47,7 +47,7 @@ Al ejecutar, el programa pregunta:
 === Analizador Léxico ===
 ¿Desde dónde desea leer?
   1 - Desde consola
-  2 - Desde archivo (./src/ejemplo/jflex/input_1.txt)
+  2 - Desde archivo (./src/input_1.txt)
 Ingrese su opción:
 ```
 
