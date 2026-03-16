@@ -493,6 +493,10 @@ public class Lexer {
         return new Token(nombre, line, column, valor);
     }
 
+    public Token next_token() throws java.io.IOException {
+        return yylex();
+    }
+
 
   /**
    * Creates a new scanner

@@ -39,7 +39,7 @@ public class Main_lexer {
                 return;
             }
             Token token;
-            while ((token = lexico.yylex()) != null) {
+            while ((token = lexico.next_token()) != null) {
                 System.out.println("Token: " + token);
 
                 if (token.nombre.equals("FIN")) {

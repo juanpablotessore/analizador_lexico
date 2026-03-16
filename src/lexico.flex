@@ -33,6 +33,10 @@
     private Token token(String nombre, int line, int column, Object valor) {
         return new Token(nombre, line, column, valor);
     }
+
+    public Token next_token() throws java.io.IOException {
+        return yylex();
+    }
 %}
 
 LineTerminator = \r|\n|\r\n
