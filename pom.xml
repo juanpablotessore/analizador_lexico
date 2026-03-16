@@ -61,7 +61,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>ejemplo.jflex.Main_lexer</mainClass>
+                            <mainClass>Main_lexer</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
