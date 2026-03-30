@@ -1,6 +1,9 @@
 
 
 import java.io.File;
+import java.io.FileReader;
+import java.io.InputStreamReader;
+import java.util.Scanner;
 
 /**
  * Genera MiLexico.java a partir de lexico.flex usando JFlex.
@@ -9,7 +12,26 @@ import java.io.File;
 public class Generador {
 
     public static void main(String[] args) {
-        String path = "./src/lexico.flex";
+
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("=== Analizador Léxico ===");
+        System.out.println("¿Desde dónde desea leer?");
+        System.out.println("  1 - Desde lexico.flex");
+        System.out.println("  2 - Desde lexico_indentacion.flex");
+        System.out.print("Ingrese su opción: ");
+
+        String opcion = teclado.nextLine().trim();
+        teclado.close();
+        String path;
+        if (opcion.equals("1")) {
+            path = "./src/lexico.flex";
+        } else if (opcion.equals("2")) {
+            path = "./src/lexico_indentacion.flex";
+        } else {
+            System.err.println("Opción inválida. Saliendo.");
+            return;
+        }
         System.out.println("Generando léxico desde: " + path);
         File file = new File(path);
         jflex.generator.LexGenerator generator = new jflex.generator.LexGenerator(file);
