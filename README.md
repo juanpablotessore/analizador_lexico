@@ -9,12 +9,13 @@ analizador_lexico/
 ├── README.md
 ├── pom.xml
 └── src/
-      ├── Generador.java      # Regenera MiLexico.java desde lexico.flex
-      ├── Main_lexer.java     # Punto de entrada principal
-      ├── Token.java          # Clase Token
-      ├── input_1.txt         # Archivo de prueba
-      ├── lexico.flex         # Definición del léxico (fuente JFlex)
-      └── Lexer.java          # Generado por JFlex (no editar a mano)
+      ├── Generador.java           # Genera Lexer.java desde un .flex (lexico.flex o lexico_indentacion.flex)
+      ├── Main_lexer.java          # Punto de entrada principal
+      ├── Token.java               # Clase Token
+      ├── input_1.txt              # Archivo de prueba
+      ├── lexico.flex              # Definición del léxico (JFlex)
+      ├── lexico_indentacion.flex  # Variante de definición con indentación
+      └── Lexer.java               # Generado por JFlex (no editar a mano)
 ```
 
 ## Prerrequisitos
@@ -24,8 +25,13 @@ analizador_lexico/
 
 ## Primer uso: generar el léxico
 
-`Lexer.java` se genera a partir de `lexico.flex` con JFlex.
-Antes de compilar por primera vez (o si modificás `lexico.flex`), ejecutá:
+`Lexer.java` se genera a partir de un archivo `.flex` con JFlex.
+El generador pregunta por:
+
+  1 - `src/lexico.flex`
+  2 - `src/lexico_indentacion.flex`
+
+Antes de compilar por primera vez (o si modificás cualquier archivo `.flex`), ejecutá:
 
 ```bash
 mvn exec:java -Dexec.mainClass="Generador"
