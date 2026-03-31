@@ -9,12 +9,11 @@ analizador_lexico/
 ├── README.md
 ├── pom.xml
 └── src/
-      ├── Generador.java           # Genera Lexer.java desde un .flex (lexico.flex o lexico_indentacion.flex)
+      ├── Generador.java           # Genera Lexer.java desde un .flex
       ├── Main_lexer.java          # Punto de entrada principal
       ├── Token.java               # Clase Token
       ├── input_1.txt              # Archivo de prueba
-      ├── lexico.flex              # Definición del léxico (JFlex)
-      ├── lexico_indentacion.flex  # Variante de definición con indentación
+      ├── lexico.flex              # Variante de definición con indentación
       └── Lexer.java               # Generado por JFlex (no editar a mano)
 ```
 
@@ -26,10 +25,6 @@ analizador_lexico/
 ## Primer uso: generar el léxico
 
 `Lexer.java` se genera a partir de un archivo `.flex` con JFlex.
-El generador pregunta por:
-
-  1 - `src/lexico.flex`
-  2 - `src/lexico_indentacion.flex`
 
 Antes de compilar por primera vez (o si modificás cualquier archivo `.flex`), ejecutá:
 
@@ -69,13 +64,6 @@ se detiene inmediatamente, tanto en modo consola como en modo archivo.
 
 | Token            | Descripción                  |
 |------------------|------------------------------|
-| `FIN`            | Corta la ejecución           |
-| `ABSTRACT`       | Palabra reservada `abstract` |
-| `BOOLEAN`        | Palabra reservada `boolean`  |
-| `BREAK`          | Palabra reservada `break`    |
-| `INTEGER_LITERAL`| Constante entera             |
-| `ID`             | Identificador                |
-| `EQ`             | `=`                          |
-| `EQEQ`           | `==`                         |
-| `PLUS`           | `+`                          |
-| `STRING_LITERAL` | Cadena entre comillas dobles |
+| `CODE`           | Abstracción código           |
+| `IDENT`          | Abstracción indentación      |
+| `DEDENT`         | Abstracción desindentación   |
