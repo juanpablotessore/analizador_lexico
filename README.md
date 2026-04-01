@@ -8,6 +8,7 @@ Analizador léxico de ejemplo construido con JFlex y Java 21.
 analizador_lexico/
 ├── README.md
 ├── pom.xml
+├── guia_indentacion.docx      # Explicación de la implementación
 └── src/
       ├── Generador.java           # Genera Lexer.java desde un .flex
       ├── Main_lexer.java          # Punto de entrada principal
